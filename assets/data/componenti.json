@@ -1,0 +1,176 @@
+[
+  {
+    "nome": "Pierpaolo Antonioli",
+    "ruolo": "AD, Dumarey",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/09/PIERPAOLO-ANTONIOLI-BIO.pdf"
+  },
+  {
+    "nome": "Christoph Aringer",
+    "ruolo": "AD, Volkswagen Group Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/03/CV-Aringer.pdf"
+  },
+  {
+    "nome": "Roberto Baldan",
+    "ruolo": "Direttore Operations, Carl Zeiss Vision Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2024/09/Roberto-Baldan-1.pdf"
+  },
+  {
+    "nome": "Lorenzo Bottinelli",
+    "ruolo": "AD e VP, BASF Italia SpA",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/LORENZO-BOTTINELLI-CV.pdf"
+  },
+  {
+    "nome": "Massimiliano Burelli",
+    "ruolo": "AD, Cogne Acciai Speciali",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/09/MASSIMILIANO-BURELLI.pdf"
+  },
+  {
+    "nome": "Marcello Cattani",
+    "ruolo": "Presidente e AD, Sanofi Srl",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/MARCELLO-CATTANI.pdf"
+  },
+  {
+    "nome": "Valentino Confalone",
+    "ruolo": "Country President & Managing Director, Novartis Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/VALENTINO-CONFALONE-2.pdf"
+  },
+  {
+    "nome": "Sandro De Poli",
+    "ruolo": "Presidente, Avio/GE",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/SANDRO-DE-POLI.pdf"
+  },
+  {
+    "nome": "Patrick De Vismes",
+    "ruolo": "Presidente, Kering Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/PATRICK-DE-VISMES-CV.pdf"
+  },
+  {
+    "nome": "Lorena Dellagiovanna",
+    "ruolo": "VP & Executive Officer, CDIO, Deputy Chief Envirommental Officer and Deputy General Manager of Government and External Relations Group, Hitachi Ltd",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/LORENA-DELLAGIOVANNA.pdf"
+  },
+  {
+    "nome": "Pasquale Frega",
+    "ruolo": "Presidente e AD, Philip Morris Italia",
+    "foto": "placeholder.svg",
+    "cv": null
+  },
+  {
+    "nome": "Nazzarena Franco",
+    "ruolo": "AD, DHL Express Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/02/CV-Nazzarena-Franco.pdf"
+  },
+  {
+    "nome": "Enrico Galasso",
+    "ruolo": "Presidente e AD, Birra Peroni Srl",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/ENRICO-GALASSO.pdf"
+  },
+  {
+    "nome": "Paolo Grue",
+    "ruolo": "Presidente e AD, Procter & Gamble Italia SpA",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/PAOLO-GRUE-ITA.pdf"
+  },
+  {
+    "nome": "Monica Iacono",
+    "ruolo": "AD, Engie Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/03/CV-Monica-Iacono.pdf"
+  },
+  {
+    "nome": "Giulio Iucci",
+    "ruolo": "Presidente, Cloud Europe",
+    "foto": "placeholder.svg",
+    "cv": null
+  },
+  {
+    "nome": "Gianluca Lilli",
+    "ruolo": "Senior Vice President Electrification Commercial Leader Italia, ABB SpA",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/GIANLUCA-LILLI.pdf"
+  },
+  {
+    "nome": "Teodoro Lio",
+    "ruolo": "Amministratore Delegato Accenture Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/07/20250224_Curriculum_07.pdf"
+  },
+  {
+    "nome": "Floriano Masoero",
+    "ruolo": "Presidente e AD, Head of Smart Infrastructure e Head di Digital Industries, Siemens Italia SpA",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/11/FLORIANO-MASOERO.pdf"
+  },
+  {
+    "nome": "Andrea Missori",
+    "ruolo": "Presidente e AD, Ericsson in Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/ANDREA-MISSORI.pdf"
+  },
+  {
+    "nome": "Giuseppe Notarnicola",
+    "ruolo": "Presidente, STMicroelectronics Italia Srl",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/NOTARNICOLA.pdf"
+  },
+  {
+    "nome": "Monica Poggio",
+    "ruolo": "Presidente e AD, Bayer Italia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/02/CV-Monica-Poggio.pdf"
+  },
+  {
+    "nome": "Paolo Ruggeri",
+    "ruolo": "Vicepresidente e Direttore Affari Istituzionali Nuovo Pignone, Baker Hughes",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/07/Paolo-Ruggeri.pdf"
+  },
+  {
+    "nome": "Leonardo Salcerini",
+    "ruolo": "AD, Toyota Material Handling",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/Salcerini.pdf"
+  },
+  {
+    "nome": "João Santos Rosa",
+    "ruolo": "Country Chair di Shell in Italia e Amministratore Delegato di Shell Italia E&P S.p.A.",
+    "foto": "placeholder.svg",
+    "cv": null
+  },
+  {
+    "nome": "Marco Travaglia",
+    "ruolo": "Presidente e AD, Gruppo Nestlé in Italia & Malta",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/Marco-Travaglia.pdf"
+  },
+  {
+    "nome": "Emanuela Trentin",
+    "ruolo": "AD e DG, Siram Veolia",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/07/EMANUELA-TRENTIN.pdf"
+  },
+  {
+    "nome": "Manuela Soffientini",
+    "ruolo": "VP Commercial Area South Europe e Presidente e Amministratore Delegato, Electrolux Appliances S.p.A.",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/MANUELA-SOFFIENTINI-1.pdf"
+  },
+  {
+    "nome": "Davide Uracchi",
+    "ruolo": "DSV Contract Logistics",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2025/07/20250224_Curriculum_08.pdf"
+  }
+]

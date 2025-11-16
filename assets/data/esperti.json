@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Pierfrancesco De Rossi",
+    "ruolo": "AD, Siemens Mobility Srl",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/06/PIERFRANCESCO-DE-ROSSI.pdf"
+  },
+  {
+    "nome": "Edoardo Uberto Cavalcabò",
+    "ruolo": "Direttore Corporate Affairs",
+    "foto": "placeholder.svg",
+    "cv": null
+  },
+  {
+    "nome": "Niccolò Moschini",
+    "ruolo": "Direttore relazioni Istituzionali e Comunicazione corporate, Kering in Italia",
+    "foto": "placeholder.svg",
+    "cv": https://impreseestere.it/wp-content/uploads/2023/06/NICCOLO-MOSCHINI.pdf
+  },
+  {
+    "nome": "Giangiacomo Pierini",
+    "ruolo": "Direttore Corporate Affairs and Sustainability, Coca-Cola Hbc Italia Srl",
+    "foto": "placeholder.svg",
+    "cv": https://impreseestere.it/wp-content/uploads/2023/06/GIANGIACOMO-PIERINI-1.pdf
+  },
+  {
+    "nome": "Renato Sciarrillo",
+    "ruolo": "Direttore Affari Istituzionali, Procter & Gamble Italia SpA",
+    "foto": "placeholder.svg",
+    "cv": https://impreseestere.it/wp-content/uploads/2023/06/RENATO-SCIARRILLO.pdf
+  },
+  {
+    "nome": "Mauro Marchiaro",
+    "ruolo": "Presidente, Accenture Outsourcing",
+    "foto": "placeholder.svg",
+    "cv": "https://impreseestere.it/wp-content/uploads/2023/08/MAURO-MARCHIARO.pdf"
+  }
+]

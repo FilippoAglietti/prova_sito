@@ -1,0 +1,661 @@
+*{box-sizing:border-box}
+html,body{height:100%}
+:root{
+  --brand:#003a70;
+  --brand-2:#002a52;
+  --accent:#0077b6;
+  --ink:#0b1320;
+  --muted:#4b5563;
+  --bg:#ffffff;
+  --surface:#f6f8fb;
+  --radius:14px;
+  --maxw:1140px;
+  --shadow:0 10px 20px rgba(2,6,23,.06);
+}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;color:var(--ink);background:var(--bg)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* Topbar */
+.topbar{background:var(--brand);color:#fff}
+.topbar .container{display:flex;align-items:center;gap:16px;padding:8px 20px}
+.topbar a{color:#fff;font-weight:600}
+
+/* Header/Nav */
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e5e7eb}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;color:#2c3e50}
+.brand img{height:34px}
+.site-title{font-weight:800;letter-spacing:.2px}
+.menu{display:flex;gap:10px;align-items:center}
+.menu a{padding:10px 12px;border-radius:10px;font-weight:600;color:#1f2937}
+.menu a:hover{background:#eef2f7}
+.menu a[aria-current="page"]{color:var(--brand-2)}
+
+/* Dropdown */
+.dropdown{position:relative}
+.dropdown-menu{position:absolute;left:0;top:calc(100% + 10px);min-width:240px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:var(--shadow);padding:10px;display:none}
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:10px 12px;border-radius:10px}
+.dropdown-menu a:hover{background:#f3f6fb}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,rgba(0,58,112,.08),transparent);padding:60px 0 60px;border-bottom:1px solid #e5e7eb}
+.hero h1{font-size:clamp(28px,4vw,48px);margin:.2em 0}
+.hero p{color:#374151;max-width:820px}
+.cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:10px;border:1px solid transparent;font-weight:700;display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff}
+.btn-outline{background:#fff;border-color:#d1d5db;color:#111827}
+
+/* Sections */
+.section{padding:60px 0}
+.section h2{font-size:clamp(22px,3vw,36px);margin:0 0 10px}
+.section .lead{color:#4b5563;max-width:860px}
+.grid{display:grid;gap:20px}
+@media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);height:100%}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;color:#111827;font-weight:600}
+.stat{display:flex;align-items:baseline;gap:8px}
+.stat .num{font-size:34px;font-weight:800;color:#2c3e50}
+.stat .lbl{color:#6b7280}
+
+/* Page hero */
+.page-hero{padding:46px 0;background:linear-gradient(0deg,rgba(0,58,112,.06),transparent)}
+.breadcrumbs{font-size:14px;color:#6b7280}
+
+/* Key-value list */
+.kv{display:grid;grid-template-columns:1fr 2fr;gap:12px;border:1px solid #e5e7eb;border-radius:12px;padding:14px}
+.kv div{padding:6px 8px}
+.kv div:nth-child(odd){background:#f9fafb}
+
+/* Footer */
+footer{border-top:1px solid #e5e7eb;padding:28px 0;color:#6b7280}
+
+/* Utilities */
+.muted{color:#6b7280}
+.anchor{scroll-margin-top:80px}
+.hide-mobile{display:none}
+@media(min-width:720px){.hide-mobile{display:initial}}
+:focus-visible{outline:3px solid #0077b6;outline-offset:2px}
+
+/* Print */
+@media print{.header,.topbar,.cta,.dropdown-menu{display:none}!body{color:#000}}
+
+/* Griglia a 4 colonne per i KPI */
+.grid.cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* distanza tra i box */
+}
+
+/* Su schermi piccoli, i box vanno a 2 per riga */
+@media (max-width: 860px) {
+  .grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Su schermi molto stretti, 1 box per riga */
+@media (max-width: 480px) {
+  .grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* === ABIE additions === */
+
+:root{
+  --abie-blue:#0B3D91;
+  --text:#222;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --border:#e5e7eb;
+  --brand:#0B3D91;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* HERO */
+.hero{background:var(--abie-blue);padding:40px 0 28px}
+.hero-inner{display:flex;justify-content:center;align-items:center}
+.hero-logo{max-width:340px;width:100%;height:auto;filter:brightness(0) invert(1)}
+
+/* KPI strip */
+.kpi-strip{background:#f9fafb;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:14px 0}
+.kpi-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center}
+.kpi-card .num{font-size:28px;font-weight:800;display:block}
+.kpi-card .label{font-size:14px;color:var(--muted);display:block;margin-top:2px}
+.kpi-card .src{font-size:12px;color:var(--muted);display:block;margin-top:6px}
+
+/* Utilities */
+.section{padding:32px 0}
+.lead{font-size:18px;color:#374151}
+.muted{color:var(--muted);font-size:14px}
+.grid{display:grid;gap:24px}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+@media (max-width: 900px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .cols-2{grid-template-columns:1fr}
+  .hero-logo{max-width:260px}
+}
+@media (max-width: 560px){
+  .kpi-grid{grid-template-columns:1fr}
+  .nav-inner{justify-content:center}
+}
+
+
+/* --- Contatti page enhancements --- */
+.contact-list{margin:0;padding:0 0 1rem 1rem;}
+.contact-list li{margin:.25rem 0;}
+.contact-form{max-width:800px}
+.form-grid{display:grid;grid-template-columns:1fr;gap:.75rem}
+.form-field label{display:block;font-weight:600;margin-bottom:.25rem}
+.form-field input,.form-field textarea{width:100%;padding:.6rem;border:1px solid #cfd6e4;border-radius:8px}
+.btn-primary{border:none;border-radius:999px;padding:.6rem 1rem;cursor:pointer;background:#0b3d91;color:#fff}
+@media (min-width: 768px){
+  .form-grid{grid-template-columns:1fr 1fr}
+  .form-field:nth-child(5){grid-column:1/-1}
+}
+
+
+
+
+
+
+
+
+/* Ensure any leftover .brand has no layout impact */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Keep top-level centering and spacing consistent */
+
+/* === NAV RESET (v05) === */
+.main-nav { position: sticky; top: 0; z-index: 50; background: #ffffff; border-bottom: 1px solid #e5e7eb; overflow: visible; }
+.main-nav .nav-inner { display: flex; align-items: center; justify-content: center; gap: 16px; height: 56px; overflow: visible; }
+.main-nav .nav-links { list-style: none; display: flex; align-items: center; justify-content: center; gap: 28px; margin: 0; padding: 0; flex-wrap: nowrap; overflow: visible; }
+.main-nav .nav-links > li { position: relative; }
+.main-nav .nav-links a { text-decoration: none; color: #111; padding: 8px 10px; border-radius: 10px; font-weight: 600; }
+.main-nav .nav-links a:hover { background: #f3f4f6; }
+/* Active tab (aria-current) */
+.main-nav .nav-links a[aria-current="page"] { color: var(--brand-2); background: #eef2f7; font-weight: 700; }
+/* Dropdown basics */
+.main-nav .nav-links > li.has-dropdown > a::after { content: "▾"; display: inline-block; margin-left: 6px; font-size: .9em; line-height: 1; }
+.main-nav .nav-links > li.has-dropdown .dropdown { position: absolute; top: 100%; left: 0; min-width: 220px; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 8px 0; margin-top: 8px; list-style: none; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.main-nav .nav-links > li.has-dropdown:hover .dropdown,
+.main-nav .nav-links > li.has-dropdown:focus-within .dropdown { display: block; }
+.main-nav .nav-links > li.has-dropdown .dropdown li { padding: 0; }
+.main-nav .nav-links > li.has-dropdown .dropdown a { display: block; padding: 10px 14px; color: #111; text-decoration: none; border-radius: 0; white-space: nowrap; }
+.main-nav .nav-links > li.has-dropdown .dropdown a:hover,
+.main-nav .nav-links > li.has-dropdown .dropdown a[aria-current="page"] { background: #eef2f7; color: var(--brand-2); font-weight: 700; }
+/* Hide legacy .brand if present */
+.main-nav .brand { display: none !important; }
+
+
+
+/* === Navbar sticky top (v06) === */
+.main-nav{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* Avoid content sticking under the nav if any overlap is observed */
+body{scroll-margin-top: 64px;}
+
+
+/* === Transparent navbar at top, blue on scroll (v07) === */
+.main-nav{
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  background: transparent;           /* transparent at top */
+  border-bottom: none;
+  transition: background-color .25s ease, box-shadow .25s ease, color .25s ease;
+}
+/* default link color on transparent (assuming hero/video behind) */
+.main-nav .nav-links a{ color: #ffffff; }
+.main-nav .nav-links a:hover{ background: rgba(255,255,255,0.12); }
+.main-nav .nav-links a[aria-current="page"]{ background: rgba(255,255,255,0.16); color: #ffffff; }
+
+/* scrolled state: brand blue background + subtle shadow */
+.main-nav.scrolled{
+  background: var(--brand);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-bottom: none;
+}
+.main-nav.scrolled .nav-links a{
+  color: #ffffff;
+}
+.main-nav.scrolled .nav-links a:hover,
+.main-nav.scrolled .nav-links a[aria-current="page"]{
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+/* Dropdown colors: keep white panel for readability, even over blue */
+.main-nav .nav-links > li.has-dropdown .dropdown{
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+.main-nav .nav-links > li.has-dropdown .dropdown a{
+  color: #111;
+}
+.main-nav .nav-links > li.has-dropdown .dropdown a:hover,
+.main-nav .nav-links > li.has-dropdown .dropdown a[aria-current="page"]{
+  background: #eef2f7;
+  color: var(--brand-2);
+}
+
+/* If there is a blue topbar above, ensure stacking works */
+.topbar, .header { z-index: 130; position: relative; }
+
+
+/* === Home-only transparent navbar (v08) === */
+/* Default for all pages: solid blue navbar */
+.main-nav{
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  background: var(--brand);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-bottom: none;
+  transition: background-color .25s ease, box-shadow .25s ease, color .25s ease;
+}
+.main-nav .nav-links a{ color: #ffffff; }
+.main-nav .nav-links a:hover{ background: rgba(255,255,255,0.12); }
+.main-nav .nav-links a[aria-current="page"]{ background: rgba(255,255,255,0.12); color: #ffffff; }
+
+/* On Home only: start transparent at top, then turn blue when scrolled */
+.home .main-nav{
+  background: transparent;
+  box-shadow: none;
+}
+.home .main-nav .nav-links a{ color: #ffffff; }
+.home .main-nav .nav-links a:hover{ background: rgba(255,255,255,0.12); }
+.home .main-nav .nav-links a[aria-current="page"]{ background: rgba(255,255,255,0.16); color: #ffffff; }
+
+.home .main-nav.scrolled{
+  background: var(--brand);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.home .main-nav.scrolled .nav-links a{ color: #ffffff; }
+.home .main-nav.scrolled .nav-links a:hover,
+.home .main-nav.scrolled .nav-links a[aria-current="page"]{
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+/* Dropdown stays readable on both states */
+.main-nav .nav-links > li.has-dropdown .dropdown{
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+.main-nav .nav-links > li.has-dropdown .dropdown a{
+  color: #111;
+}
+.main-nav .nav-links > li.has-dropdown .dropdown a:hover,
+.main-nav .nav-links > li.has-dropdown .dropdown a[aria-current="page"]{
+  background: #eef2f7;
+  color: var(--brand-2);
+}
+
+
+/* === Remove only bottom line under navbar (v09) === */
+.main-nav{ border-bottom: none !important; }
+.main-nav.scrolled{ border-bottom: none !important; }
+/* If any container under the nav draws a top border, neutralize immediate following section */
+.main-nav + * { border-top: none !important; }
+
+
+/* === Hero YouTube background (v10) === */
+.hero-video{
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* height can be tuned */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-video .video-bg{
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+.hero-video .video-bg iframe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh; /* 100 * (16/9) vh to cover */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+}
+.hero-video .video-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.20));
+  z-index: -1;
+}
+/* Ensure inner content (like the blue band + 'In evidenza') is readable */
+.hero-video > *:not(.video-bg):not(.video-overlay){
+  position: relative;
+  z-index: 1;
+}
+/* Spacing fixes when nav is transparent on Home */
+.home .hero-video{ margin-top: 0; }
+
+
+/* === Hero video visibility fix (v11) === */
+/* Use non-negative z-index to avoid being hidden behind page background */
+.hero-video{ position: relative; }
+.hero-video .video-bg{ position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-video .video-overlay{ position: absolute; inset: 0; z-index: 1; }
+.hero-video > *:not(.video-bg):not(.video-overlay){ position: relative; z-index: 2; }
+/* Keep the iframe centering+cover approach */
+.hero-video .video-bg iframe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;  /* maintains 16:9 while covering tall screens */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+}
+
+
+/* === Glassmorphism for "In evidenza" over video === */
+.hero-video .card {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 1px solid rgba(255, 255, 255, 0.30) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+.hero-video .card h3,
+.hero-video .card p,
+.hero-video .card .list,
+.hero-video .card .list a { color:#ffffff; }
+
+/* White hero title & subtitle over video */
+#hero-copy h1 { color:#ffffff !important; }
+#hero-copy p, #hero-copy p strong { color:#ffffff !important; }
+
+
+/* === v23-fix: Logo size without changing header band height === */
+.hero-inner { min-height: unset !important; }
+.hero-logo {
+  max-height: 50px !important;
+  width: auto !important;
+  max-width: none !important;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+/* === v23-fix: Navbar behavior === */
+/* Default: blue navbar across the site */
+.main-nav {
+  background-color: var(--brand) !important;
+  box-shadow: none;
+}
+/* Home starts transparent; JS will color with scroll */
+body.home .main-nav {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+
+
+/* === v26: Increase bottom margin of hero video section === */
+.hero-video {
+  padding-bottom: 60px !important;
+}
+
+
+/* === v27: Prevent bottom caption cut in hero video === */
+/* Tunable vertical shift for the YouTube background video */
+:root { --hero-video-shift: -4%; } /* move video up by 6% of its height */
+@media (max-width: 768px) {
+  :root { --hero-video-shift: -4%; } /* gentler shift on mobile */
+}
+
+/* Apply the shift to the iframe so more of the lower area stays visible */
+#yt-hero-bg iframe {
+  transform: translateY(var(--hero-video-shift)) !important;
+  will-change: transform;
+}
+
+/* If needed, you can also slightly enlarge the background to avoid empty edges */
+#yt-hero-bg {
+  overflow: hidden;
+}
+
+
+/* === v28: Increase bottom padding of hero-video box to 100px === */
+.hero-video {
+  padding-bottom: 100px !important;
+}
+
+
+/* === v29: Increase hero video height to 75vh for more lower visibility === */
+.hero-video, 
+#yt-hero-bg, 
+#yt-hero-bg iframe {
+  min-height: 75vh !important;
+}
+
+
+/* === v34: KPI stats stacked (number on one line above, label below) === */
+#kpi-grid .card.stat {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+}
+#kpi-grid .card.stat .num {
+  display: block !important;
+  white-space: nowrap !important; /* keep number on one line */
+  font-weight: 800;
+}
+#kpi-grid .card.stat .lbl {
+  display: block !important;
+  white-space: normal !important;
+  font-size: 0,95rem; /* keep smaller label (using comma per your preference) */
+  line-height: 1,35;
+}
+
+/* === KPI grid flex (5 items in one row) === */
+.kpi-flex{
+  display:flex;
+  flex-wrap:nowrap;           /* keep in one row */
+  justify-content:space-between;
+  gap:1rem;
+}
+.kpi-flex .card.stat{
+  flex:0 0 calc(20% - 1rem);  /* 5 columns */
+  text-align:center;
+}
+/* Ensure numbers don't wrap weirdly */
+.kpi-flex .card.stat .num{
+  display:block;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+/* === v36-scroll: ensure sticky navbar works across full page === */
+html, body { overflow: visible !important; }
+.main-nav { position: sticky; top: 0; z-index: 120; }
+
+/* === Events carousel === */
+.events-carousel{
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .5rem;
+}
+.ev-track{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: .25rem .5rem .75rem;
+}
+.ev-card{
+  scroll-snap-align: start;
+  min-width: 320px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ev-card h3{ margin-top: 0; font-size: 1.05rem; }
+.ev-meta{ color: var(--muted); font-size: .92rem; }
+.ev-nav{
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.ev-nav:disabled{ opacity: .5; cursor: default; }
+@media (max-width: 900px){
+  .ev-track{ grid-auto-columns: 80%; }
+}
+@media (min-width: 901px){
+  .ev-track{ grid-auto-columns: 33%; } /* show ~3 cards in viewport */
+}
+
+/* === Site footer (ABIE) === */
+.site-footer{
+  background: var(--surface);
+  border-top: 1px solid #e5e7eb;
+  padding: 28px 0 40px;
+  color: var(--ink);
+}
+.site-footer .footer-inner{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+  justify-items: center;
+  text-align: center;
+}
+.site-footer .footer-brand .hero-logo{
+  height: 60px; /* same visual impression as header */
+}
+.footer-contacts{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 16px 28px;
+  align-items: start;
+}
+.fc-item{ display: grid; grid-template-columns: 24px 1fr; gap: 10px; }
+.fc-ic{ color: var(--brand); display: flex; align-items: start; justify-content: center; }
+.fc-body strong{ display:block; font-weight:700; margin-bottom: 4px; }
+.fc-body a{ color: var(--brand-2); text-decoration: none; }
+.fc-body a:hover{ text-decoration: underline; }
+@media (max-width: 820px){
+  .footer-contacts{ grid-template-columns: 1fr; text-align: left; }
+  .site-footer .footer-inner{ justify-items: stretch; }
+  .site-footer .footer-brand{ text-align: center; }
+}
+
+/* === v43: Footer brand style (blue bg, white text, stacked icons) === */
+.site-footer{
+  background: var(--brand) !important;
+  color: #ffffff !important;
+  border-top: none !important;
+}
+.site-footer .footer-inner{
+  text-align: center;
+}
+.site-footer .footer-brand .hero-logo{
+  filter: none; /* ensure original logo colors */
+}
+.footer-contacts{
+  color: #ffffff;
+}
+.fc-item{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.fc-ic{
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+.fc-body strong{
+  color: #ffffff;
+}
+.fc-body a, .fc-body span{
+  color: #ffffff;
+}
+.fc-body a:hover{
+  text-decoration: underline;
+  opacity: .95;
+}
+
+/* === v44: Footer spacing tighter (icon + label closer to value) === */
+.site-footer .footer-inner{ row-gap: 16px; }
+.fc-item{ gap: 4px; }
+.fc-ic{ margin-bottom: 0; }
+.fc-body{ display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.2; }
+.fc-body strong{ margin: 0; padding: 0; font-size: .95rem; }
+.fc-body a, .fc-body span{ margin: 0; padding: 0; line-height: 1.25; }
+
+
+/* === Profiles grid (ABIE) === */
+.profile-grid{ display:grid; grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 18px 22px; }
+.profile-card{ display:flex; flex-direction:column; align-items:center; text-align:center; padding: 16px; }
+.profile-avatar{ width: 128px; height: 128px; border-radius: 999px; object-fit: cover; object-position: center; display:block; box-shadow: var(--shadow); background: #f3f4f6; }
+.profile-name{ font-weight:700; margin-top: 12px; }
+.profile-role{ color: var(--muted); font-size:.95rem; margin: 4px 0 10px; }
+.profile-actions .btn{ padding: 8px 12px; font-size: .92rem; }
+@media (max-width: 1024px){ .profile-grid{ grid-template-columns: repeat(3, minmax(160px, 1fr)); } }
+@media (max-width: 640px){ .profile-grid{ grid-template-columns: repeat(2, minmax(140px, 1fr)); } .profile-avatar{ width: 110px; height:110px; } }
+/* Logo grid (optional) */
+.logo-grid{ display:grid; grid-template-columns: repeat(5, minmax(120px,1fr)); gap: 18px 24px; align-items:center; justify-items:center; }
+.logo-grid img{ max-height:40px; width:auto; filter:grayscale(0); opacity:.95 }
+@media (max-width: 1024px){ .logo-grid{ grid-template-columns: repeat(3, minmax(100px,1fr)); } }
+@media (max-width: 640px){ .logo-grid{ grid-template-columns: repeat(2, minmax(90px,1fr)); } }
